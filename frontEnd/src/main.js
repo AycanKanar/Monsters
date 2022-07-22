@@ -31,10 +31,7 @@ let specialBtn = document.querySelector(".special-js");
 //Lancement du jeux
 beginTheGame();
 
-/**
- * ! SUITE
- * TODO: Crée un menu en HTML/CSS contenant Jouer - Scores - Crédit et faite les TODO
- */
+// Boutton Joueur
 let button = document.querySelector('.btn');
 
  button.addEventListener('click', event => {
@@ -47,6 +44,7 @@ let button = document.querySelector('.btn');
     } else if (taille > 8){
       div.innerHTML += 'Ton pseudo est trop long !';
     } else {
+      var Pseudo = taille ;
       // pour faire l'animation
         document.querySelector('#menu').classList.add('animation');
         // attend la fin de l'animation pour lancer
@@ -67,10 +65,31 @@ let button = document.querySelector('.btn');
           console.log(error);
         }
       },1000);
-    }
+    } 
   }
   return verifPseudo();
  });
+
+
+// Boutton Score
+let Score = document.querySelector('.score');
+
+ Score.addEventListener('click', event => {
+  function goScore(){
+      // pour faire l'animation
+        document.querySelector('#menu').classList.add('animation');
+        // attend la fin de l'animation pour lancer
+        setTimeout(()=>{
+          // enleve le score ect
+          document.querySelector("#menu").style.display = 'none';
+          // remet en visible le jeux
+      document.querySelector(".dnone").style.visibility = 'hidden';
+      },1000);
+    }
+    changeMessageStatus("Tableau des scores");
+  return goScore();
+ });
+
 
 
 /**
@@ -186,7 +205,7 @@ function beginTheGame() {
   //*Le bug ce trouve ici, il manquais un argument, le chemin vers l'image
   //*Le code pourrait être améliorer, il y a des soucis dans l'organisation selon moi
   if (!isItNullOrUndefined(hero)) {
-    hero = new Allies("Jeanjean", 100, 60, 3, "");
+    hero = new Allies("Pseudo0", 100, 60, 3, "");
     hero.statusInit();
   }
 }

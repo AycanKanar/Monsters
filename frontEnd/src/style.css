@@ -5,7 +5,7 @@
 
 * {
     font-family: "pixel";
-    color: white;    
+    color: white;
 }
 
 body {
@@ -22,9 +22,11 @@ main {
     min-height: 100vh;
 }
 
-h2, label{
-    text-shadow: 0 0 5px black ;
+h2,
+label {
+    text-shadow: 0 0 5px black;
 }
+
 /*
 *   SECTION 
 */
@@ -77,37 +79,42 @@ article {
 .enemy-turn {
     transform: rotate(-6367deg);
 }
-.quick-enemy-turn{
+
+.quick-enemy-turn {
     transform: rotate(-3470deg);
 }
 
 .allies-turn {
     transform: rotate(-3350deg);
 }
-.quick-allies-turn{
+
+.quick-allies-turn {
     transform: rotate(230deg);
 }
 
 .disable {
     display: none;
 }
+
 /*
 history
 */
-.history{
+.history {
     height: 80px;
     align-self: flex-start;
-    display:flex;
+    display: flex;
     justify-content: start;
     position: fixed;
     max-width: 100vh;
     left: 1%;
 }
-.dead-enemy{
- object-fit: contain;
- width: 60px;
+
+.dead-enemy {
+    object-fit: contain;
+    width: 60px;
     filter: sepia(100%)
 }
+
 /*
 Framework modif
 */
@@ -137,11 +144,11 @@ Framework modif
 
 
 
-.none{
+.none {
     visibility: hidden;
 }
 
-#menu{
+#menu {
     position: fixed;
     background-image: url(/frontEnd/src/img/background_arcade.png);
     background-size: 175rem;
@@ -155,40 +162,51 @@ Framework modif
     justify-content: center;
 }
 
-.row button{
+.btn {
     width: 10rem;
     margin-bottom: 5rem;
     margin-top: 2rem;
+    background-color: yellow;
+    border-radius: 5px;
 }
 
-.menu-s{
+.menu-s {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     width: 50rem;
 }
 
-.row{
+.row {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.noir{
+.noir {
     color: black;
 }
 
-.animation{
+.animation {
     animation-name: animatedBackground;
     animation-duration: 4s;
     animation-fill-mode: forwards;
-}  
+}
 
 @keyframes animatedBackground {
     from {
-      background-size: 175rem;
+        background-size: 175rem;
     }
+
     to {
-      background-size: 700rem;
+        background-size: 700rem;
     }
-  }
+}
+
+.btnscore {
+    border: none;
+    color: black;
+    background-color: yellow;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
