@@ -44,7 +44,6 @@ let button = document.querySelector('.btn');
     } else if (taille > 8){
       div.innerHTML += 'Ton pseudo est trop long !';
     } else {
-      var Pseudo = taille ;
       // pour faire l'animation
         document.querySelector('#menu').classList.add('animation');
         // attend la fin de l'animation pour lancer
@@ -82,13 +81,33 @@ let Score = document.querySelector('.score');
         setTimeout(()=>{
           // enleve le score ect
           document.querySelector("#menu").style.display = 'none';
-          // remet en visible le jeux
+          // remet en invisible le menu
       document.querySelector(".dnone").style.visibility = 'hidden';
       },1000);
     }
     changeMessageStatus("Tableau des scores");
   return goScore();
  });
+
+
+ // Boutton credit
+let credit = document.querySelector('.credit');
+
+credit.addEventListener('click', event => {
+ function gocredit(){
+     // pour faire l'animation
+       document.querySelector('#menu').classList.add('animation');
+       // attend la fin de l'animation pour lancer
+       setTimeout(()=>{
+         // enleve le score ect
+         document.querySelector("#menu").style.display = 'none';
+         // remet en invisible le menu
+     document.querySelector(".dnone").style.visibility = 'hidden';
+     },1000);
+   }
+   changeMessageStatus("Credits \n https://twitter.com/pixelpavanz \n barzork_guerriere \n barzork_souriciere \n https://twitter.com/penusbmic \n barzork_tenebreux \n https://twitter.com/LivvyGlizzy \n barzork_plante_folle \n https://twitter.com/Kaktuspirat \n barzork_la_mort \n https://twitter.com/nashor_kim \n gueriere barzork_samourai \n et barzork_ninja \n https://twitter.com/pita_akm \n barzork_breton \n https://twitter.com/Sturo \n barzork_epice \n https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/8633e6aeaa44935.png \n grave.png");
+ return gocredit();
+});
 
 
 
